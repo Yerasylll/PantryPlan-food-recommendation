@@ -1,4 +1,5 @@
 import { makePlan, sanitizePlan, validateProfile, eligible } from "./engine.js";
+
 export const STORAGE_KEY = "pantryplan-kitchen";
 export function mondayKey(date = new Date()) {
   const d = new Date(date);
@@ -6,11 +7,13 @@ export function mondayKey(date = new Date()) {
   d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
+
 export function dateAt(key, day = 0) {
   const d = new Date(key + "T12:00:00");
   d.setDate(d.getDate() + day);
   return d;
 }
+
 export function shiftWeek(key, amount) {
   return mondayKey(dateAt(key, amount * 7));
 }
@@ -36,6 +39,7 @@ export function freshState(catalog, date = new Date()) {
     checked: {},
   };
 }
+
 export function sanitizeState(catalog, raw, date = new Date()) {
   const base = freshState(catalog, date);
   if (!raw || raw.schema !== 1) return base;
@@ -117,6 +121,7 @@ export function sanitizeState(catalog, raw, date = new Date()) {
     return base;
   }
 }
+
 export function reconcileProfile(catalog, state, profile) {
   state.profile = validateProfile(profile);
   let removed = 0;
