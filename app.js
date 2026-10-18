@@ -6,6 +6,7 @@ import {
   days,
   meals,
 } from "./engine.js";
+
 import {
   STORAGE_KEY,
   mondayKey,
@@ -16,6 +17,7 @@ import {
   reconcileProfile,
   moveMeal,
 } from "./model.js";
+
 const $ = (s) => document.querySelector(s),
   esc = (s) =>
     String(s).replace(
@@ -29,6 +31,7 @@ const $ = (s) => document.querySelector(s),
           "'": "&#39;",
         })[c],
     );
+
 const paths = {
   home: "M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z",
   book: "M12 6v15M3 4c3-1 6 0 9 2 3-2 6-3 9-2v15c-3-1-6 0-9 2-3-2-6-3-9-2z",
