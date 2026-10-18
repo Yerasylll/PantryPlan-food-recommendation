@@ -60,6 +60,7 @@ def recommend(catalog, profile, mode="tfidf", meal=None):
             for t in tokens(r)
         ]
     )
+
     results = []
     for recipe in catalog["recipes"]:
         if eligible(recipe, profile) and (meal is None or recipe["meal"] == meal):
@@ -74,7 +75,6 @@ def recommend(catalog, profile, mode="tfidf", meal=None):
 
 if __name__ == "__main__":
     import argparse
-
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--profile", help="Path to a JSON profile; omitted for demo preferences"
