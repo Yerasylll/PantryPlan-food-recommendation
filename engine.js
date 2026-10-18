@@ -8,6 +8,7 @@ export const days = [
   "Saturday",
   "Sunday",
 ];
+
 export function validateProfile(p = {}) {
   const maxMinutes = Number(p.maxMinutes ?? 60);
   if (!Number.isFinite(maxMinutes) || maxMinutes < 1 || maxMinutes > 240)
@@ -28,6 +29,7 @@ export function validateProfile(p = {}) {
     disliked: arr("disliked"),
   };
 }
+
 export function eligible(item, profile) {
   const p = validateProfile(profile);
   const ids = item.ingredients
