@@ -3,7 +3,7 @@
   "products": [
     {
       "id": "oats",
-      "name": "Rolled oats",
+      "name": "Rolled oats/oatmeal",
       "unit": "g",
       "category": "Grains",
       "allergens": [
