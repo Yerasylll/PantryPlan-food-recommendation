@@ -9,7 +9,7 @@ Python 3.10+ is required. From this folder:
 ```sh
 python3 scripts/serve.py
 ```
-
+             
 Open http://127.0.0.1:8091/. The port defaults to 8091 so it can run alongside the existing prototype. Set PORT to choose another port. Do not open index.html directly because the application uses JavaScript modules and fetches catalog.json over HTTP.
 
 No installation or API keys are needed. The optional Google Fonts stylesheet has a system-font fallback.
