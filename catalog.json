@@ -1,0 +1,935 @@
+{
+  "notice": "Original illustrative demo recipes, quantities and timings. Not a validated nutrition or allergen database. No external recipe text was copied.",
+  "products": [
+    {
+      "id": "oats",
+      "name": "Rolled oats",
+      "unit": "g",
+      "category": "Grains",
+      "allergens": [
+        "gluten"
+      ],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "unit": "ml",
+      "category": "Dairy",
+      "allergens": [
+        "milk"
+      ],
+      "vegan": false,
+      "vegetarian": true
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "unit": "each",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "yogurt",
+      "name": "Plain yogurt",
+      "unit": "g",
+      "category": "Dairy",
+      "allergens": [
+        "milk"
+      ],
+      "vegan": false,
+      "vegetarian": true
+    },
+    {
+      "id": "berries",
+      "name": "Berries",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "unit": "each",
+      "category": "Eggs",
+      "allergens": [
+        "egg"
+      ],
+      "vegan": false,
+      "vegetarian": true
+    },
+    {
+      "id": "bread",
+      "name": "Whole wheat bread",
+      "unit": "g",
+      "category": "Grains",
+      "allergens": [
+        "gluten"
+      ],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "rice",
+      "name": "Dry rice",
+      "unit": "g",
+      "category": "Grains",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "chickpeas",
+      "name": "Cooked chickpeas",
+      "unit": "g",
+      "category": "Canned goods",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "olive-oil",
+      "name": "Olive oil",
+      "unit": "ml",
+      "category": "Pantry",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "unit": "each",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "lentils",
+      "name": "Dry lentils",
+      "unit": "g",
+      "category": "Grains",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken breast",
+      "unit": "g",
+      "category": "Meat",
+      "allergens": [],
+      "vegan": false,
+      "vegetarian": false
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "pasta",
+      "name": "Dry wheat pasta",
+      "unit": "g",
+      "category": "Grains",
+      "allergens": [
+        "gluten"
+      ],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu",
+      "unit": "g",
+      "category": "Chilled foods",
+      "allergens": [
+        "soy"
+      ],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "soy-sauce",
+      "name": "Soy sauce",
+      "unit": "ml",
+      "category": "Pantry",
+      "allergens": [
+        "soy",
+        "gluten"
+      ],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon",
+      "unit": "g",
+      "category": "Fish",
+      "allergens": [
+        "fish"
+      ],
+      "vegan": false,
+      "vegetarian": false
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "beans",
+      "name": "Cooked kidney beans",
+      "unit": "g",
+      "category": "Canned goods",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "pepper",
+      "name": "Bell pepper",
+      "unit": "g",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "quinoa",
+      "name": "Dry quinoa",
+      "unit": "g",
+      "category": "Grains",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "feta",
+      "name": "Feta cheese",
+      "unit": "g",
+      "category": "Dairy",
+      "allergens": [
+        "milk"
+      ],
+      "vegan": false,
+      "vegetarian": true
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "unit": "each",
+      "category": "Produce",
+      "allergens": [],
+      "vegan": true,
+      "vegetarian": true
+    },
+    {
+      "id": "peanut-butter",
+      "name": "Peanut butter",
+      "unit": "g",
+      "category": "Pantry",
+      "allergens": [
+        "peanut"
+      ],
+      "vegan": true,
+      "vegetarian": true
+    }
+  ],
+  "recipes": [
+    {
+      "id": "banana-oats",
+      "name": "Banana oat bowl",
+      "meal": "breakfast",
+      "minutes": 10,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "oats",
+          "quantity": 80
+        },
+        {
+          "productId": "milk",
+          "quantity": 250
+        },
+        {
+          "productId": "banana",
+          "quantity": 1
+        }
+      ],
+      "steps": [
+        "Simmer oats with milk until soft.",
+        "Slice banana and serve on top."
+      ],
+      "vegan": false,
+      "vegetarian": true,
+      "allergens": [
+        "gluten",
+        "milk"
+      ]
+    },
+    {
+      "id": "berry-yogurt",
+      "name": "Berry yogurt bowl",
+      "meal": "breakfast",
+      "minutes": 5,
+      "style": "Fresh",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "yogurt",
+          "quantity": 200
+        },
+        {
+          "productId": "berries",
+          "quantity": 100
+        },
+        {
+          "productId": "banana",
+          "quantity": 1
+        }
+      ],
+      "steps": [
+        "Wash berries and slice banana.",
+        "Spoon yogurt into a bowl and add fruit."
+      ],
+      "vegan": false,
+      "vegetarian": true,
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "id": "tomato-eggs",
+      "name": "Tomato and spinach eggs",
+      "meal": "breakfast",
+      "minutes": 15,
+      "style": "Savory",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "egg",
+          "quantity": 2
+        },
+        {
+          "productId": "tomato",
+          "quantity": 150
+        },
+        {
+          "productId": "spinach",
+          "quantity": 50
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 5
+        }
+      ],
+      "steps": [
+        "Wash and chop vegetables.",
+        "Soften tomato and spinach in oil. Add beaten eggs and cook until set."
+      ],
+      "vegan": false,
+      "vegetarian": true,
+      "allergens": [
+        "egg"
+      ]
+    },
+    {
+      "id": "apple-oats",
+      "name": "Apple water porridge",
+      "meal": "breakfast",
+      "minutes": 12,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "oats",
+          "quantity": 80
+        },
+        {
+          "productId": "apple",
+          "quantity": 1
+        },
+        {
+          "productId": "berries",
+          "quantity": 50
+        }
+      ],
+      "steps": [
+        "Wash and dice apple.",
+        "Cook oats and apple in water until tender. Add berries."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "banana-toast",
+      "name": "Peanut banana toast",
+      "meal": "breakfast",
+      "minutes": 7,
+      "style": "Quick",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "bread",
+          "quantity": 80
+        },
+        {
+          "productId": "banana",
+          "quantity": 1
+        },
+        {
+          "productId": "peanut-butter",
+          "quantity": 25
+        }
+      ],
+      "steps": [
+        "Toast bread.",
+        "Spread peanut butter and add sliced banana."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": [
+        "gluten",
+        "peanut"
+      ]
+    },
+    {
+      "id": "breakfast-beans",
+      "name": "Tomato breakfast beans",
+      "meal": "breakfast",
+      "minutes": 15,
+      "style": "Savory",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "beans",
+          "quantity": 180
+        },
+        {
+          "productId": "tomato",
+          "quantity": 150
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 5
+        }
+      ],
+      "steps": [
+        "Wash and chop tomato.",
+        "Simmer cooked beans with tomato and oil until heated through."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": []
+    },
+    {
+      "id": "chickpea-salad",
+      "name": "Lemon chickpea salad",
+      "meal": "lunch",
+      "minutes": 15,
+      "style": "Fresh",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "chickpeas",
+          "quantity": 200
+        },
+        {
+          "productId": "cucumber",
+          "quantity": 150
+        },
+        {
+          "productId": "tomato",
+          "quantity": 150
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        },
+        {
+          "productId": "lemon",
+          "quantity": 1
+        }
+      ],
+      "steps": [
+        "Wash and chop cucumber and tomato.",
+        "Combine with drained chickpeas, oil and lemon juice."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": []
+    },
+    {
+      "id": "lentil-soup",
+      "name": "Carrot lentil soup",
+      "meal": "lunch",
+      "minutes": 35,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "lentils",
+          "quantity": 100
+        },
+        {
+          "productId": "carrot",
+          "quantity": 120
+        },
+        {
+          "productId": "onion",
+          "quantity": 80
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 5
+        }
+      ],
+      "steps": [
+        "Wash vegetables and rinse lentils.",
+        "Chop vegetables and soften in oil.",
+        "Add lentils and water; simmer until lentils are tender."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": []
+    },
+    {
+      "id": "chicken-rice",
+      "name": "Chicken rice bowl",
+      "meal": "lunch",
+      "minutes": 30,
+      "style": "Savory",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "chicken",
+          "quantity": 180
+        },
+        {
+          "productId": "rice",
+          "quantity": 90
+        },
+        {
+          "productId": "broccoli",
+          "quantity": 150
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Cook rice according to its package.",
+        "Cook chicken thoroughly in oil. Steam broccoli and assemble."
+      ],
+      "vegan": false,
+      "vegetarian": false,
+      "allergens": []
+    },
+    {
+      "id": "quinoa-salad",
+      "name": "Quinoa garden salad",
+      "meal": "lunch",
+      "minutes": 25,
+      "style": "Fresh",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "quinoa",
+          "quantity": 90
+        },
+        {
+          "productId": "cucumber",
+          "quantity": 120
+        },
+        {
+          "productId": "tomato",
+          "quantity": 120
+        },
+        {
+          "productId": "feta",
+          "quantity": 40
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Rinse and cook quinoa according to its package.",
+        "Wash and chop vegetables. Toss with quinoa, feta and oil."
+      ],
+      "vegan": false,
+      "vegetarian": true,
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "id": "bean-potato",
+      "name": "Warm bean potato bowl",
+      "meal": "lunch",
+      "minutes": 30,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "beans",
+          "quantity": 180
+        },
+        {
+          "productId": "potato",
+          "quantity": 200
+        },
+        {
+          "productId": "spinach",
+          "quantity": 70
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Wash potatoes and spinach.",
+        "Boil diced potato until tender.",
+        "Warm beans and spinach in oil and combine with potato."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": []
+    },
+    {
+      "id": "tofu-salad",
+      "name": "Crisp tofu cucumber bowl",
+      "meal": "lunch",
+      "minutes": 20,
+      "style": "Fresh",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "tofu",
+          "quantity": 180
+        },
+        {
+          "productId": "cucumber",
+          "quantity": 150
+        },
+        {
+          "productId": "carrot",
+          "quantity": 100
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Drain tofu and pat dry.",
+        "Pan fry tofu in oil. Wash and chop vegetables, then combine."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": [
+        "soy"
+      ]
+    },
+    {
+      "id": "tomato-pasta",
+      "name": "Tomato spinach pasta",
+      "meal": "dinner",
+      "minutes": 25,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "pasta",
+          "quantity": 100
+        },
+        {
+          "productId": "tomato",
+          "quantity": 200
+        },
+        {
+          "productId": "spinach",
+          "quantity": 70
+        },
+        {
+          "productId": "onion",
+          "quantity": 60
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Cook pasta according to its package.",
+        "Wash and chop vegetables. Soften onion and tomato in oil.",
+        "Add spinach, then toss with drained pasta."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "tofu-rice",
+      "name": "Gingerless tofu rice skillet",
+      "meal": "dinner",
+      "minutes": 30,
+      "style": "Savory",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "tofu",
+          "quantity": 180
+        },
+        {
+          "productId": "rice",
+          "quantity": 90
+        },
+        {
+          "productId": "broccoli",
+          "quantity": 150
+        },
+        {
+          "productId": "soy-sauce",
+          "quantity": 15
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Cook rice according to its package.",
+        "Drain and pan fry tofu in oil.",
+        "Add broccoli and a splash of water; cook until tender, then add sauce and rice."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": [
+        "gluten",
+        "soy"
+      ]
+    },
+    {
+      "id": "salmon-potato",
+      "name": "Salmon with potatoes",
+      "meal": "dinner",
+      "minutes": 40,
+      "style": "Savory",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "salmon",
+          "quantity": 180
+        },
+        {
+          "productId": "potato",
+          "quantity": 200
+        },
+        {
+          "productId": "broccoli",
+          "quantity": 150
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        },
+        {
+          "productId": "lemon",
+          "quantity": 1
+        }
+      ],
+      "steps": [
+        "Wash vegetables. Dice and boil potatoes until tender.",
+        "Cook salmon thoroughly and steam broccoli.",
+        "Serve with olive oil and lemon juice."
+      ],
+      "vegan": false,
+      "vegetarian": false,
+      "allergens": [
+        "fish"
+      ]
+    },
+    {
+      "id": "bean-chili",
+      "name": "Simple bean and pepper pot",
+      "meal": "dinner",
+      "minutes": 30,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "beans",
+          "quantity": 220
+        },
+        {
+          "productId": "pepper",
+          "quantity": 150
+        },
+        {
+          "productId": "tomato",
+          "quantity": 200
+        },
+        {
+          "productId": "onion",
+          "quantity": 80
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Wash and chop vegetables.",
+        "Soften onion and pepper in oil.",
+        "Add tomato and cooked beans. Simmer until heated through."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": []
+    },
+    {
+      "id": "lentil-rice",
+      "name": "Lentil rice supper",
+      "meal": "dinner",
+      "minutes": 40,
+      "style": "Comfort",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "lentils",
+          "quantity": 90
+        },
+        {
+          "productId": "rice",
+          "quantity": 70
+        },
+        {
+          "productId": "carrot",
+          "quantity": 100
+        },
+        {
+          "productId": "onion",
+          "quantity": 80
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Rinse lentils and rice. Wash and chop vegetables.",
+        "Soften vegetables in oil. Add lentils, rice and water.",
+        "Simmer, adding water as needed, until grains are fully cooked."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "allergens": []
+    },
+    {
+      "id": "chicken-pasta",
+      "name": "Chicken tomato pasta",
+      "meal": "dinner",
+      "minutes": 30,
+      "style": "Savory",
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": "chicken",
+          "quantity": 180
+        },
+        {
+          "productId": "pasta",
+          "quantity": 100
+        },
+        {
+          "productId": "tomato",
+          "quantity": 180
+        },
+        {
+          "productId": "olive-oil",
+          "quantity": 10
+        }
+      ],
+      "steps": [
+        "Cook pasta according to its package.",
+        "Cook chicken thoroughly in oil. Add chopped washed tomato and soften.",
+        "Combine with drained pasta."
+      ],
+      "vegan": false,
+      "vegetarian": false,
+      "allergens": [
+        "gluten"
+      ]
+    }
+  ]
+}
