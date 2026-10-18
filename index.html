@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#457534">
+    <meta name="description" content="Plan your meals, organize your pantry, and keep your grocery list in one place.">
+    <title>PantryPlan · Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar" id="sidebar"><a href="#recipes" class="brand" aria-label="PantryPlan recipes"><span
+                    class="brand-leaf"><svg viewBox="0 0 28 28" aria-hidden="true">
+                        <path d="M20.5 5.5c-8-1-15 3-14 10 1 5 8 7 12 2 3-4 2-8 2-12Z" />
+                        <path d="M8 21c1-5 4-9 9-12" />
+                    </svg></span><span class="brand-name">PantryPlan<span
+                        class="brand-period">.</span></span></a><button class="collapse" id="collapse-sidebar"
+                aria-label="Collapse navigation"></button>
+            <nav class="main-nav" aria-label="Main navigation"><button data-view="overview"
+                    data-icon="home">Overview</button><button data-view="recipes"
+                    data-icon="book">Recipes</button><button data-view="planner" data-icon="calendar"
+                    class="active">Meal planner</button><button data-view="groceries" data-icon="bag">Grocery list <span
+                        id="nav-grocery-count" class="nav-count"></span></button><button data-view="pantry"
+                    data-icon="shelf">My pantry</button><button id="saved-recipes" class="saved-nav"><svg
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 3h12v18l-6-4-6 4z" />
+                    </svg><span class="nav-label">Saved recipes</span><span id="saved-count"
+                        class="nav-count">0</span></button><button id="preferences-side"><svg viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path d="M4 7h16M4 17h16M8 4v6m8 4v6" />
+                    </svg><span class="nav-label">Food preferences</span></button></nav>
+            <div class="sidebar-bottom"><button class="about-button" id="about-button">About PantryPlan</button></div>
+        </aside>
+        <div class="main-shell">
+            <header class="topbar"><button class="mobile-menu" id="mobile-menu"
+                    aria-label="Open navigation"></button><label class="global-search"><span
+                        id="search-icon"></span><input id="search" type="search"
+                        placeholder="Search recipes or ingredients…"
+                        aria-label="Search recipes or ingredients"><kbd>/</kbd></label>
+                <div class="topbar-right"><button class="top-icon" id="today-button"
+                        aria-label="Show today's meals"></button><button class="top-icon" id="help-button"
+                        aria-label="Help"></button><span class="top-divider"></span>
+                    <div class="identity"><span>Your kitchen<small>Meal planning</small></span><span
+                            class="avatar">YA</span></div>
+                </div>
+            </header>
+            <main>
+                <div class="page-heading">
+                    <div>
+                        <div class="breadcrumb">Your kitchen <span>/</span> <span id="breadcrumb-current">Meal
+                                planner</span></div>
+                        <div class="title-row">
+                            <h1 id="page-title">Weekly meal plan</h1><button id="rename-plan" class="square lavender"
+                                aria-label="Rename meal plan"></button><button id="copy-link" class="square lavender"
+                                aria-label="Copy this view's link"></button>
+                        </div>
+                        <p id="page-description">A place for your meals, from the first idea to the last ingredient.</p>
+                    </div>
+                    <div class="heading-actions">
+                        <div class="workspace-indicator"><span class="small-dot mint"></span>Personal plan</div><button
+                            class="primary" id="add-meal-main"></button>
+                    </div>
+                </div>
+                <div class="toolbar">
+                    <div class="toolbar-left"><button class="outline" id="filter-button"></button>
+                        <div class="week-control"><button id="previous-week" aria-label="Previous week"></button><button
+                                id="week-label" aria-label="Return to current week"></button><button id="next-week"
+                                aria-label="Next week"></button></div><span class="active-filter" id="active-filter"
+                            hidden></span>
+                    </div>
+                    <div class="toolbar-right"><button class="outline" id="export-button"></button><span
+                            class="toolbar-divider"></span>
+                        <div class="view-toggle" role="group" aria-label="Planner layout"><button class="active"
+                                id="board-layout" aria-label="Board layout" aria-pressed="true"></button><button
+                                id="list-layout" aria-label="List layout" aria-pressed="false"></button></div>
+                    </div>
+                </div>
+                <div class="day-tabs" id="day-tabs" role="group" aria-label="Filter meals by day"></div>
+                <div class="view-subhead"><span id="view-summary"></span><button id="generate-week"
+                        class="text-action"></button></div>
+                <div id="content" aria-live="polite"></div>
+                <div class="workspace-footer"><span id="footer-status">Changes are saved on this device.</span></div>
+            </main>
+        </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="dialog">
+        <div class="dialog-top"><span id="dialog-label">PantryPlan</span><button id="close-dialog" class="icon-button"
+                aria-label="Close dialog"></button></div>
+        <div id="dialog-body"></div>
+    </dialog>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
