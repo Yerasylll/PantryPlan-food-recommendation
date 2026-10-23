@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+actor "Adult home cook" as User
+rectangle "PantryPlan V3 user scope" {
+ usecase "Set preferences and exclusions" as Prefs
+ usecase "Discover eligible recipes" as Discover
+ usecase "View recipe and explanation" as Detail
+ usecase "Like or hide a recipe" as Feedback
+ usecase "Build, move or edit dated weekly plan" as Plan
+ usecase "Maintain pantry quantities" as Pantry
+ usecase "Browse and add grocery products" as Products
+ usecase "Calculate grocery list" as Grocery
+ usecase "Check and export groceries" as Export
+}
+User -- Prefs
+User -- Discover
+User -- Detail
+User -- Feedback
+User -- Plan
+User -- Pantry
+User -- Products
+User -- Export
+Plan ..> Grocery : <<include>>
+Pantry ..> Grocery : <<include>>
+Products ..> Grocery : <<include>>
+Export ..> Grocery : <<include>>
+@enduml

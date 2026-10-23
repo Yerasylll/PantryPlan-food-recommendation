@@ -1,0 +1,21 @@
+flowchart TB
+  subgraph current[Implemented V3 browser system]
+    ui[app.js and HTML CSS] --> model[model.js state validation and week operations]
+    ui --> engine[engine.js eligibility ranking planning groceries]
+    model --> engine
+    ui --> catalog[catalog.json illustrative recipes and products]
+    ui <--> storage[Origin-specific localStorage]
+    store[Static host] --> ui
+  end
+  subgraph reference[Optional local reference - not called by browser]
+    server[scripts serve.py loopback static and API] --> py[scripts recommender.py]
+    py --> catalog
+    checks[Domain and state tests] -.-> model
+    checks -.-> engine
+    checks -.-> py
+  end
+  subgraph proposed[Proposed - not implemented]
+    clients[Web and later mobile clients] --> backend[Python API modular monolith]
+    backend --> db[Relational user-owned records]
+    importer[Permitted data preparation and evaluation] --> db
+  end
