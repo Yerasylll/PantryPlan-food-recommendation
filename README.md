@@ -127,18 +127,20 @@ Documentation and diagrams must also be versioned. They are **not yet all presen
 
 - [YouTrack project](https://pantryplan-team.youtrack.cloud/projects/PP)
 - [Delivery guide, responsibilities, milestones, risks and dependencies](https://pantryplan-team.youtrack.cloud/articles/PP-A-1/PantryPlan-delivery-and-review-guide)
+- [Proposal, comparisons, provenance, architecture and hosted verification PR #4](https://github.com/Yerasylll/PantryPlan-food-recommendation/pull/4)
+- [Complete design/evidence report and editable/exported diagrams](https://github.com/Yerasylll/PantryPlan-food-recommendation/tree/pp-12-design-evidence/docs/pre-defense) (review branch; not merged).
 - [Research and requirements review PR #2](https://github.com/Yerasylll/PantryPlan-food-recommendation/pull/2)
 - [Complete research document on its review branch](https://github.com/Yerasylll/PantryPlan-food-recommendation/blob/pp-8-research-findings/docs/research/README.md): critical literature review, downloadable full-text links, four-submission findings, scope update, testable requirements, evaluation scenarios and discussion protocol. This is a branch artifact, not merged documentation.
 
 | Assessment component | Available evidence / remaining action |
 |---|---|
-| Proposal | Problem, aim, objectives and scope summarized here; research PR contains the target-group/proposal update. Agree the final audience and version the full proposal. PP-1. |
+| Proposal | Problem, aim, objectives and scope summarized here; research PR contains the target-group/proposal update. The full updated proposal is available in PR #4; final team/supervisor agreement remains pending. PP-1. |
 | User relevance | Four questionnaire submissions analyzed; findings mapped to requirements. Actual 3–5 discussion records or the permitted substantive client agreement still require evidence. PP-6–PP-8. |
 | Literature | Critical analysis of eight scientific works and four official technical references, with source locators/download links, in PR #2. Team review pending; retain the stated foundational-source exception. PP-9–PP-11. |
-| Existing systems | Version and verify 3–5 systems over the same 6–10 criteria. PP-12. |
-| Technology decisions | Version at least three decisions, each with 2–3 alternatives and requirement-based justification. PP-13. |
+| Existing systems | Four systems compared across ten criteria using dated official sources in PR #4; documented capabilities and hands-on testing are distinguished. Team review pending. PP-12. |
+| Technology decisions | Five decisions with alternatives and requirement-based rationale are recorded in PR #4; proposed backend choices remain subject to review. PP-13. |
 | Requirements | Priorities and acceptance criteria prepared in PR #2; distinguish implemented behavior from proposed refinements. PP-34. |
-| Architecture | Upload aligned context, use-case and component diagrams, including editable sources and readable exports. PP-15–PP-17. |
+| Architecture | Context, UML use-case and component diagrams have editable Mermaid/PlantUML sources and visually checked SVG exports in PR #4; human review pending. PP-15–PP-17. |
 | Prototype | V3 source and frozen release available; core hosted/browser smoke evidence recorded; broader QA remains pending. PP-18–PP-26, PP-28. |
 | Evaluation | Ten research-informed scenarios and baseline/measurement plan prepared; real-user quality/usability results remain future work. PP-27. |
 | Project management | Assigned YouTrack tasks, priorities, milestone, risk register and dependency links available. Complete authentic review/contribution/access audit. PP-2–PP-5, PP-32. |
