@@ -79,7 +79,7 @@ PORT=8092 python3 scripts/serve.py
 
 For a checkout of the frozen submission, run `git switch --detach pre-defense-1` after cloning. Create a branch before developing from that checkout.
 
-Optional local experiment endpoints are `GET /api/catalog` and `POST /api/recommend`. The prototype also works on a static host that serves its source files; Python endpoints are unavailable on static hosting. An optional Google Fonts stylesheet has a system-font fallback. A final public demo URL still needs to be recorded and verified in PP-26.
+Optional local experiment endpoints are `GET /api/catalog` and `POST /api/recommend`. The prototype also works on a static host that serves its source files; Python endpoints are unavailable on static hosting. An optional Google Fonts stylesheet has a system-font fallback. The public prototype is hosted at [PantryPlan on GitHub Pages](https://yerasylll.github.io/PantryPlan-food-recommendation/). On 23 October 2026, core recipe/plan/pantry/grocery flows, export, reload persistence and mobile navigation were checked; broader accessibility and cross-browser evaluation remain pending. See PP-26 and PP-28.
 
 ## Testing
 
@@ -139,7 +139,7 @@ Documentation and diagrams must also be versioned. They are **not yet all presen
 | Technology decisions | Version at least three decisions, each with 2–3 alternatives and requirement-based justification. PP-13. |
 | Requirements | Priorities and acceptance criteria prepared in PR #2; distinguish implemented behavior from proposed refinements. PP-34. |
 | Architecture | Upload aligned context, use-case and component diagrams, including editable sources and readable exports. PP-15–PP-17. |
-| Prototype | V3 source and frozen release available; final demo/browser evidence pending. PP-18–PP-26, PP-28. |
+| Prototype | V3 source and frozen release available; core hosted/browser smoke evidence recorded; broader QA remains pending. PP-18–PP-26, PP-28. |
 | Evaluation | Ten research-informed scenarios and baseline/measurement plan prepared; real-user quality/usability results remain future work. PP-27. |
 | Project management | Assigned YouTrack tasks, priorities, milestone, risk register and dependency links available. Complete authentic review/contribution/access audit. PP-2–PP-5, PP-32. |
 | Supervisor feedback | Obtain actual substantive comments and link the resulting decisions/revisions. PP-29–PP-30. |
