@@ -162,10 +162,10 @@ Live prototype, research analysis and design documents exist.
 
 The pre-defense-1 release preserves the original source snapshot.
 
-Documentation PRs still need integration into the submitted snapshot.
+Research, README and design documents are now on main.
 
 Next: user discussions, evaluation execution and final submission.
 
 ### Speaker notes and sources
 
-Repository https://github.com/Yerasylll/PantryPlan-food-recommendation ; release /releases/tag/pre-defense-1 ; YouTrack https://pantryplan-team.youtrack.cloud/projects/PP . Do not move the existing tag. Draft PR2 contains research, PR3 README, PR4 design/evidence. Human reviews are separate from deliverable availability. Rehearsal and actual submission receipt remain team actions. Explain the existing TF-IDF prototype and planned ML work candidly.
+Repository https://github.com/Yerasylll/PantryPlan-food-recommendation ; supplementary release /releases/tag/pre-defense-1.1 ; original /releases/tag/pre-defense-1 remains unchanged. YouTrack https://pantryplan-team.youtrack.cloud/projects/PP . Owner approved merging PR2 research, PR3 README and PR4 design/evidence without teammate review. Actual reviews remain separate. Rehearsal and institutional submission receipt remain pending. Current deterministic TF-IDF prototype does not establish trained ML or recommendation-quality results.
