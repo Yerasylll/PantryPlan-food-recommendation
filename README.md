@@ -1,5 +1,18 @@
 # PantryPlan
 
+## Delivery update: 23 October 2026
+
+The repository owner approved integrating documentation PRs [#2](https://github.com/Yerasylll/PantryPlan-food-recommendation/pull/2), [#3](https://github.com/Yerasylll/PantryPlan-food-recommendation/pull/3) and [#4](https://github.com/Yerasylll/PantryPlan-food-recommendation/pull/4) without teammate review. They are now merged. This records delivery availability, not peer or supervisor approval. Earlier pending statements below describe the original preparation stage.
+
+- [Research, user findings, requirements and evaluation plan](docs/research/README.md)
+- [Proposal, system/technology comparisons, provenance, architecture and browser checks](docs/pre-defense/README.md)
+- [Twelve-slide presentation text and speaker notes](docs/pre-defense/defense-presentation.md)
+- [Live prototype](https://yerasylll.github.io/PantryPlan-food-recommendation/)
+- The existing `pre-defense-1` tag stays on `e213081f9507cf1468a8392db877d8abaa5b9a28`. The supplementary `pre-defense-1.1` release identifies the integrated documentation and later catalog/formatting updates. It does not replace the original tag.
+- Latest application source `c286d697485dcdfbc04536789b43785a7d0ce85f` passed all **24 tests, 0 failed**, on 23 October. Subsequent changes are documentation only. The catalog label changed from “Rolled oats” to “Rolled oats/oatmeal”; ingredient IDs and quantities remain the same. Provenance hashes in the original design record identify its frozen baseline.
+- Remaining team actions: conduct/document the required real user discussions or actual-client agreement, rehearse the defense, and submit the final materials. Four questionnaire submissions are exploratory evidence and do not establish completed live discussions. Actual review/feedback evidence remains separate. Recommendation quality evaluation is planned, not completed.
+
+
 **Diploma project:** Design and Development of an Intelligent Food Recommendation System Using Machine Learning.
 
 PantryPlan connects recipe discovery, editable meal plans, pantry quantities and a consolidated grocery list. This repository contains the selected V3 web prototype and its JavaScript/Python reference logic.
