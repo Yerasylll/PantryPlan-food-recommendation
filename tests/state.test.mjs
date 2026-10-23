@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+
 import {
   STORAGE_KEY,
   mondayKey,
@@ -13,17 +14,20 @@ import {
 const catalog = JSON.parse(
   fs.readFileSync(new URL("../catalog.json", import.meta.url)),
 );
+
 test("application begins with a complete editable week", () => {
   assert.equal(STORAGE_KEY, "pantryplan-kitchen");
   const s = freshState(catalog, new Date("2026-10-22T12:00:00"));
   assert.equal(s.week, "2026-10-19");
   assert.equal(s.plans[s.week].length, 21);
 });
+
 test("week navigation handles month and year boundaries", () => {
   assert.equal(mondayKey(new Date("2026-10-25T12:00:00")), "2026-10-19");
   assert.equal(shiftWeek("2026-12-28", 1), "2027-01-04");
   assert.equal(shiftWeek("2026-10-19", -1), "2026-10-12");
 });
+
 test("moving occupied meals swaps day assignments without changing servings or ingredients", () => {
   const plan = [
     { day: 0, meal: "lunch", recipeId: "chickpea-salad", servings: 2 },

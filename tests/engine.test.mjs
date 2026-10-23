@@ -11,9 +11,11 @@ import {
   fit,
   validateProfile,
 } from "../engine.js";
+
 const catalog = JSON.parse(
   fs.readFileSync(new URL("../catalog.json", import.meta.url)),
 );
+
 const profile = {
   diet: "any",
   maxMinutes: 60,
@@ -23,6 +25,7 @@ const profile = {
   liked: [],
   disliked: [],
 };
+
 test("catalog has unique IDs and valid ingredient references, quantities and dietary labels", () => {
   const ids = catalog.products.map((p) => p.id);
   assert.equal(new Set(ids).size, ids.length);
@@ -54,6 +57,7 @@ test("catalog has unique IDs and valid ingredient references, quantities and die
     );
   }
 });
+
 test("vegan constraint holds for every returned recipe and plan slot", () => {
   const p = { ...profile, diet: "vegan" };
   assert.ok(recommend(catalog, p).length);
@@ -64,6 +68,7 @@ test("vegan constraint holds for every returned recipe and plan slot", () => {
     ),
   );
 });
+
 test("ingredient exclusions and allergen filters are hard constraints", () => {
   const p = {
     ...profile,
@@ -80,6 +85,7 @@ test("ingredient exclusions and allergen filters are hard constraints", () => {
     ),
   );
 });
+
 test("time limit holds and empty candidate list is explicit", () => {
   assert.ok(
     recommend(catalog, { ...profile, maxMinutes: 15 }).every(
@@ -91,6 +97,7 @@ test("time limit holds and empty candidate list is explicit", () => {
   assert.equal(x.plan.length, 0);
   assert.equal(x.missing.length, 21);
 });
+
 test("TF-IDF vectors are normalized and ingredient preference affects order", () => {
   const m = fit(catalog.recipes);
   for (const v of Object.values(m.vectors))
@@ -105,6 +112,7 @@ test("TF-IDF vectors are normalized and ingredient preference affects order", ()
   assert.equal(ranked[0].id, "chickpea-salad");
   assert.ok(ranked[0].score > 0);
 });
+
 test("unknown preference tokens cause finite deterministic fallback scores", () => {
   const p = { ...profile, preferred: ["unknown-token"] };
   const a = recommend(catalog, p);
@@ -114,6 +122,7 @@ test("unknown preference tokens cause finite deterministic fallback scores", () 
     recommend(catalog, p, { mode: "baseline" }).map((r) => r.id),
   );
 });
+
 test("likes change scores; dislikes exclude items", () => {
   const p = {
     ...profile,
@@ -125,6 +134,7 @@ test("likes change scores; dislikes exclude items", () => {
   assert.equal(a[0].id, "salmon-potato");
   assert.ok(!a.some((r) => r.id === "berry-yogurt"));
 });
+
 test("baseline orders by cooking time without relaxing filters", () => {
   const a = recommend(
     catalog,
@@ -134,6 +144,7 @@ test("baseline orders by cooking time without relaxing filters", () => {
   assert.ok(a.every((r) => r.vegetarian));
   assert.ok(a.every((r, i) => i === 0 || r.minutes >= a[i - 1].minutes));
 });
+
 test("planner fills unique day/meal slots with matching meal types and serving sizes", () => {
   const { plan, missing } = makePlan(catalog, profile, { servings: 3 });
   assert.equal(plan.length, 21);
@@ -144,11 +155,13 @@ test("planner fills unique day/meal slots with matching meal types and serving s
     assert.equal(catalog.recipes.find((r) => r.id === s.recipeId).meal, s.meal);
   }
 });
+
 test("planner rotates compatible options before repeating", () => {
   const { plan } = makePlan(catalog, profile);
   const first = plan.filter((s) => s.meal === "lunch").slice(0, 6);
   assert.equal(new Set(first.map((s) => s.recipeId)).size, 6);
 });
+
 test("grocery quantities scale and aggregate repeated ingredients", () => {
   const list = groceryList(catalog, [
     { recipeId: "chickpea-salad", servings: 2 },
@@ -157,6 +170,7 @@ test("grocery quantities scale and aggregate repeated ingredients", () => {
   assert.equal(list.find((p) => p.id === "chickpeas").quantity, 600);
   assert.equal(list.find((p) => p.id === "lemon").quantity, 3);
 });
+
 test("pantry subtracts once from combined total and clamps at zero", () => {
   const list = groceryList(
     catalog,
@@ -169,6 +183,7 @@ test("pantry subtracts once from combined total and clamps at zero", () => {
   assert.equal(list.find((p) => p.id === "chickpeas").quantity, 500);
   assert.ok(!list.some((p) => p.id === "lemon"));
 });
+
 test("direct product additions share grocery aggregation with meal plan", () => {
   const list = groceryList(
     catalog,
@@ -178,6 +193,7 @@ test("direct product additions share grocery aggregation with meal plan", () => 
   );
   assert.equal(list.find((p) => p.id === "tomato").quantity, 200);
 });
+
 test("invalid quantities, IDs and profiles are rejected", () => {
   assert.throws(() =>
     groceryList(catalog, [], {}, [{ productId: "tomato", quantity: -1 }]),
@@ -197,6 +213,7 @@ test("invalid quantities, IDs and profiles are rejected", () => {
   assert.throws(() => validateProfile({ ...profile, maxMinutes: NaN }));
   assert.throws(() => validateProfile({ ...profile, diet: "unknown" }));
 });
+
 test("saved plans discard duplicate, malformed and newly incompatible slots", () => {
   const p = { ...profile, diet: "vegan" };
   const rows = [
@@ -208,6 +225,7 @@ test("saved plans discard duplicate, malformed and newly incompatible slots", ()
   ];
   assert.equal(sanitizePlan(catalog, rows, p).length, 1);
 });
+
 test("product catalog uses the same hard dietary constraints", () => {
   const tofu = catalog.products.find((p) => p.id === "tofu");
   assert.equal(
@@ -216,6 +234,7 @@ test("product catalog uses the same hard dietary constraints", () => {
   );
   assert.equal(eligible(tofu, { ...profile, diet: "vegan" }), true);
 });
+
 test("Python and JS reference rankings agree across multiple profiles", () => {
   const python = process.env.PANTRYPLAN_PYTHON || "python3";
   const profiles = [
