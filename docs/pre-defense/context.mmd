@@ -1,0 +1,7 @@
+flowchart LR
+  user[Adult home cook or household planner] -->|Preferences, servings, plan and pantry edits| system[PantryPlan static browser application]
+  system -->|Recipes, dated meal plan, grocery list and snapshot export| user
+  team[Project team] -->|Version reviewed source and illustrative catalog| system
+  host[Static file host] -->|HTML CSS JS and catalog JSON| system
+  future[Future permitted external data] -.->|Proposed controlled import; not a live integration| team
+  note[Outside current scope: restaurants, checkout, accounts and household sync]
