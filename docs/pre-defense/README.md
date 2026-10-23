@@ -303,3 +303,35 @@ Check committee/supervisor access, documentation PR review/merge status, editabl
 ![Components](components.svg)
 
 Editable sources: [context](context.mmd), [use cases](use-cases.puml), [components](components.mmd).
+
+---
+
+# Static deployment and browser verification
+
+Executed 23 October 2026. Tasks PP-26 and PP-28. Public URL: https://yerasylll.github.io/PantryPlan-food-recommendation/ . GitHub Pages was enabled for main / repository root. GitHub settings reported the site live; the public page loaded successfully. The main source head at configuration was e213081f9507cf1468a8392db877d8abaa5b9a28. Application source was not changed; asset-by-asset deployment hashes were not independently measured.
+
+## Observed outcomes
+
+| Check | Condition / actual observation | Result |
+|---|---|---|
+| Startup and recipe data | Public HTTPS page loaded all 18 recipe cards | Pass |
+| Search | Entered chickpea; one matching Lemon chickpea salad card remained | Pass |
+| Recipe details by keyboard | Enter activated the recipe button; ingredients, method and declared sample allergens appeared | Pass |
+| Meal scheduling | Enter opened Add to plan; Tuesday lunch saved as Lemon chickpea salad for two servings; edit dialog retained these values | Pass |
+| Grocery recomputation | Selected week displayed 21 planned meals; total cooked chickpeas needed was 800 g after the edit | Pass |
+| Pantry subtraction | Actual keyboard entry of 200 g pantry stock produced 800 g required / 200 g pantry / 600 g to buy | Pass |
+| Checklist persistence | Marked chickpeas purchased; after reload the checkbox remained checked and the counter showed one purchased item | Pass |
+| Export | Export list produced the dated pantryplan-groceries-2026-10-19.txt download | Pass |
+| Week isolation | Following week displayed empty slots; returning to current week restored its 21 meals | Pass |
+| Desktop | Current weekly planner observed at 1440 × 1000; screenshot retained locally | Pass for inspected view |
+| Mobile layout | Chrome viewport emulation at 390 × 844: recipes rendered, page width 390 px matched viewport width 390 px; no page-wide horizontal overflow in inspected recipe view | Pass for inspected view |
+| Mobile navigation | Enter opened navigation and activated Grocery list; grocery heading rendered | Pass |
+| Captured console | Final Chrome live check returned no captured error entries | No errors captured in that observation |
+
+Temporary viewport overrides were reset after testing. Test-only changes affected browser-local state in verification sessions, not another user's account or shared server records.
+
+## Limits and remaining evaluation
+
+This is a bounded assistant-run smoke/acceptance check using recorded actions, not full accessibility certification, a real-phone test or observed-user usability study. Complete keyboard tab order/focus restoration, screen reader behavior, drag/swap alternatives, every export/edit edge case, and additional browsers remain broader QA work. Twenty-four automated domain/state/reference-parity tests passed separately against the frozen source; no new source tests were necessary for documentation-only changes. Planned ranking evaluation and user benefit remain unmeasured.
+
+Static hosting executes the browser JavaScript and serves catalog.json. It does not run scripts/serve.py or expose the Python API. GitHub Pages was selected instead of Render for this prototype; no Render deployment is claimed. Keep the public demo URL in the README and YouTrack. The site follows main going forward; the pre-defense-1 tag remains the fixed source submission reference.
